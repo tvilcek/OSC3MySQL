@@ -235,20 +235,22 @@ INSERT INTO radionica (naziv, iznos, datum, lokacija, opis, predavac) VALUES
 
 SET SQL_SAFE_UPDATES=0;
 
+UPDATE predavac 
+SET prezime = 'Matanović'
+WHERE prezime = 'Vilček';
+
+UPDATE radionica 
+SET iznos = 25
+WHERE naziv = 'Design Talks';
+
 UPDATE predavac A inner join radionica B
 ON A.sifra = B.predavac
 SET A.mail = 'skupi.predavac@gmail.com'
-WHERE B.iznos = 40;
+WHERE B.iznos > 29;
+
+DELETE polaznik.* FROM polaznik 
+WHERE (prezime = "B%");
 
 DELETE A.* FROM prijava A
 INNER JOIN polaznik B ON A.polaznici = B.sifra
 WHERE (B.prezime = "Thomas");
-
-
-
-
-
-
-
-
-
