@@ -210,6 +210,7 @@ INSERT INTO predavac (ime, prezime, mail) VALUES
 ('Ana', 'Leh', 'aleh@ffos.hr'),
 ('Mihaela', 'Konjevod', 'konjevod@ffos.hr'),
 ('Aleksandra', 'Šarac', 'asarac@ffos.hr'),
+('Aleksandra', 'Šarac', 'asarac@ffos.hr'),
 ('Antea', 'Eskeričić', 'aeskericic@ffos.hr'),
 ('Manuela', 'Mikulecki', 'mmikulecki@ffos.hr'),
 ('Marina', 'Dimić', 'mdimic@ffos.hr'),
@@ -295,10 +296,3 @@ INSERT INTO prijava (polaznik, radionica, dolazak) VALUES
 (39, 1, 1),
 (37, 3, 1),
 (38, 2, 1);
-
-
-
-
-
-
-
