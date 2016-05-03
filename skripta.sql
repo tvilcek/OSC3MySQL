@@ -296,49 +296,6 @@ INSERT INTO prijava (polaznik, radionica, dolazak) VALUES
 (37, 3, 1),
 (38, 2, 1);
 
-SET SQL_SAFE_UPDATES=0;
-
-/*Izlistati sve podatke iz tablice predavač*/
-SELECT * from predavac;
-
-/*Izlistati sve radionice koje su se održale između 01.04.2016. i 06.04.2016.*/
-SELECT * from radionica
-WHERE datum between '2016-04-01' and '2016-04-06';
-
-/*Promijeniti prezime predavača u Matanović ukoliko je njegovo prezime Vilček*/
-UPDATE predavac 
-SET prezime = 'Matanović'
-WHERE prezime = 'Vilček';
-
-/*Promijeniti iznos u 25 kn ako je radionica Design Talks*/
-UPDATE radionica 
-SET iznos = 25
-WHERE naziv = 'Design Talks';
-
-/*Promijeniti mail predavača ukoliko iznos njegove radionice prelazi 29 kn*/
-UPDATE predavac A inner join radionica B
-ON A.sifra = B.predavac
-SET A.mail = 'skupi.predavac@gmail.com'
-WHERE B.iznos > 29;
-
-/*Obrisati svakog polaznika čije prezime počinje slovom B*/
-DELETE polaznik.* FROM polaznik 
-WHERE (prezime = "B%");
-
-/*Obrisati sve prijave osobe s prezimenom Thomas*/
-DELETE A.* FROM prijava A
-INNER JOIN polaznik B ON A.polaznik = B.sifra
-WHERE (B.prezime = "Thomas");
-
-/*
-Izlistajte sve podatke iz radionice;
-Izlistajte sva imena polaznika gdje je šifra veća od 40; 
-Promijenite prezime polaznika sa šifrom 50, te izlistajte da vidite da li vam je prošlo;
-Promijenite ime predavača (proizvoljno) čija radionica je Dev Meetup Vinkovci;
-Obrišite polaznika sa šifrom 51;
-*/
-
-
 
 
 
