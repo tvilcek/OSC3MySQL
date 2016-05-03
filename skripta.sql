@@ -36,14 +36,14 @@ predavac int
 
 
 create table prijava (
-polaznici int,
+polaznik int,
 radionica int,
 dolazak boolean
 );
 
 
 alter table radionica add foreign key (predavac) references predavac(sifra);
-alter table prijava add foreign key (polaznici) references polaznik(sifra);
+alter table prijava add foreign key (polaznik) references polaznik(sifra);
 alter table prijava add foreign key (radionica) references radionica(sifra);
 
 CREATE UNIQUE INDEX un_index
@@ -233,17 +233,110 @@ INSERT INTO radionica (naziv, iznos, datum, lokacija, opis, predavac) VALUES
 ('Android Talks 2 - Data Binding', 20, '2016-02-19', 'CAFFE BAR PEPPERMINT', 'Nakon izrazito uspješnog Android Talks okupljanja u siječnju, dobru praksu nastavljamo i dalje. Hvala svima na komentarima iz ispunjenih anketa. Neke ćemo savjete primijeniti u ovom događaju.', 11),
 ('Uvod u Linux 10', 20, '2016-01-30', 'ETFOS (KAMPUS)', 'S jubilarnom desetom “Uvod u Linux” radionicom krećemo u 2016. S obzirom da smo se do sada vrlo dobro upoznali s Linuxom, dolazimo do poglavlja u kojima će polaznici kroz znatno više praktičnih vježbi imati priliku doživjeti punu snagu i mogućnosti ovog operativnog sustava.', 2);
 
+INSERT INTO prijava (polaznik, radionica, dolazak) VALUES 
+(35, 9, 0),
+(25, 3, 1),
+(98, 4, 0),
+(53, 8, 1),
+(21, 11, 1),
+(69, 5, 0),
+(36, 6, 1),
+(52, 8, 1),
+(8, 9, 0),
+(48, 10, 1),
+(68, 4, 1),
+(54, 1, 1),
+(55, 2, 1),
+(56, 3, 1),
+(57, 4, 1),
+(58, 6, 1),
+(59, 7, 1),
+(60, 8, 1),
+(61, 9, 0),
+(62, 10, 1),
+(63, 11, 1),
+(64, 12, 0),
+(65, 13, 1),
+(1, 13, 1),
+(2, 12, 0),
+(3, 11, 1),
+(4, 10, 1),
+(5, 9, 0),
+(6, 8, 1),
+(7, 7, 0),
+(8, 6, 1),
+(9, 5, 1),
+(10, 4, 1),
+(11, 3, 0),
+(12, 2, 1),
+(13, 1, 1),
+(14, 1, 1),
+(15, 2, 1),
+(16, 3, 0),
+(17, 4, 1),
+(18, 5, 1),
+(19, 6, 0),
+(20, 7, 1),
+(21, 8, 0),
+(22, 9, 1),
+(23, 10, 1),
+(24, 11, 1),
+(25, 12, 1),
+(26, 13, 1),
+(27, 13, 1),
+(28, 12, 1),
+(29, 11, 1),
+(30, 10, 1),
+(31, 9, 1),
+(32, 8, 0),
+(33, 7, 0),
+(34, 6, 0),
+(35, 5, 1),
+(36, 4, 1),
+(39, 1, 1),
+(37, 3, 1),
+(38, 2, 1);
+
 SET SQL_SAFE_UPDATES=0;
 
+/*Izlistati sve podatke iz tablice predavač*/
+SELECT * from predavac;
+
+/*Izlistati sve radionice koje su se održale između 01.04.2016. i 06.04.2016.*/
+SELECT * from radionica
+WHERE datum between '2016-04-01' and '2016-04-06';
+
+/*Promijeniti prezime predavača u Matanović ukoliko je njegovo prezime Vilček*/
+UPDATE predavac 
+SET prezime = 'Matanović'
+WHERE prezime = 'Vilček';
+
+/*Promijeniti iznos u 25 kn ako je radionica Design Talks*/
+UPDATE radionica 
+SET iznos = 25
+WHERE naziv = 'Design Talks';
+
+/*Promijeniti mail predavača ukoliko iznos njegove radionice prelazi 29 kn*/
 UPDATE predavac A inner join radionica B
 ON A.sifra = B.predavac
 SET A.mail = 'skupi.predavac@gmail.com'
-WHERE B.iznos = 40;
+WHERE B.iznos > 29;
 
+/*Obrisati svakog polaznika čije prezime počinje slovom B*/
+DELETE polaznik.* FROM polaznik 
+WHERE (prezime = "B%");
+
+/*Obrisati sve prijave gospodina s prezimenom Thomas*/
 DELETE A.* FROM prijava A
-INNER JOIN polaznik B ON A.polaznici = B.sifra
+INNER JOIN polaznik B ON A.polaznik = B.sifra
 WHERE (B.prezime = "Thomas");
 
+/*
+Izlistajte sve podatke iz radionice;
+Izlistajte sva imena polaznika gdje je šifra veća od 40; 
+Promijenite prezime polaznika sa šifrom 50, te izlistajte da vidite da li vam je prošlo;
+Promijenite 
+*/
 
 
 
