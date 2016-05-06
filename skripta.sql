@@ -229,9 +229,12 @@ INSERT INTO radionica (naziv, iznos, datum, lokacija, opis, predavac) VALUES
 ('Pyxie Dust', 30, '2016-03-04', 'COWORKING SPACE OSIJEK', 'Projekt Pyxie Dust je model koji tinejdžericama pruža inspiraciju i osnažuje ih da se obrazuju i razvijaju u STEM područjima (Science, Technology, Engineering, Mathematics).', 4),
 ('Dev Meetup Vinkovci', 20, '2016-02-26', 'COFFE HOUSE CHARLIE', 'Iz Vinkovaca ste i zanima vas svijet developmenta ili već dugo plivate u njegovim vodama? Odlično! Pridružite nam se u Coffe houseu “Charlie” na prvom “Dev Meetup Vinkovci”.', 7),
 ('iOS Talks 1 - Swift u praksi', 40, '2016-02-26', 'CAFFE BAR PEPPERMINT', 'Već duže vrijeme polaznici CodeCAMP-a u svojim anketama iskazuju interes za sadržaje vezane uz iOS development. Imali smo ih malo u prethodnim godinama, ali toj nestašici dolazi kraj.', 10),
-('Design Talks: Proces dizajna i komunikacija s klijentom', 10, '2016-02-24', 'CAFFE BAR PEPPERMINT', 'U srijedu, 24. veljače 2016. godine u 17 h u prostorijama Caffe Bara Peppermint održat će se prvi po redu Design Talks, novi projekt naše udruge pokrenut s ciljem aktivnijeg okupljanja zajednice dizajnera kako bi radili na razmjeni iskustava, vještina i znanja te pružili uvid u stvarne izazove s kojima se susreću u praktičnom radu.', 12),
-('Android Talks 2 - Data Binding', 20, '2016-02-19', 'CAFFE BAR PEPPERMINT', 'Nakon izrazito uspješnog Android Talks okupljanja u siječnju, dobru praksu nastavljamo i dalje. Hvala svima na komentarima iz ispunjenih anketa. Neke ćemo savjete primijeniti u ovom događaju.', 11),
-('Uvod u Linux 10', 20, '2016-01-30', 'ETFOS (KAMPUS)', 'S jubilarnom desetom “Uvod u Linux” radionicom krećemo u 2016. S obzirom da smo se do sada vrlo dobro upoznali s Linuxom, dolazimo do poglavlja u kojima će polaznici kroz znatno više praktičnih vježbi imati priliku doživjeti punu snagu i mogućnosti ovog operativnog sustava.', 2);
+('Design Talks: Proces dizajna i komunikacija s klijentom', 10, '2016-02-24', 'CAFFE BAR PEPPERMINT', 'U srijedu, 24. veljače 2016. godine u 17 h u prostorijama Caffe Bara Peppermint održat će se prvi po redu Design Talks, novi projekt naše udruge pokrenut s ciljem aktivnijeg okupljanja zajednice dizajnera kako bi radili na razmjeni iskustava, vještina i znanja te pružili uvid u stvarne izazove s kojima se susreću u praktičnom radu.', 12);
+
+
+INSERT INTO radionica (naziv, iznos, datum, lokacija, opis) VALUES
+('Android Talks 2 - Data Binding', 20, '2016-02-19', 'CAFFE BAR PEPPERMINT', 'Nakon izrazito uspješnog Android Talks okupljanja u siječnju, dobru praksu nastavljamo i dalje. Hvala svima na komentarima iz ispunjenih anketa. Neke ćemo savjete primijeniti u ovom događaju.'),
+('Uvod u Linux 10', 20, '2016-01-30', 'ETFOS (KAMPUS)', 'S jubilarnom desetom “Uvod u Linux” radionicom krećemo u 2016. S obzirom da smo se do sada vrlo dobro upoznali s Linuxom, dolazimo do poglavlja u kojima će polaznici kroz znatno više praktičnih vježbi imati priliku doživjeti punu snagu i mogućnosti ovog operativnog sustava.');
 
 INSERT INTO prijava (polaznik, radionica, dolazak) VALUES 
 (35, 9, 0),
