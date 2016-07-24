@@ -13,4 +13,5 @@ Oprema: računalo s instaliranim <b>MySQL Workbench</b> -> https://dev.mysql.com
 
 Predavačice: Mi smo studentice 3. godine preddiplomskg studija Informatologije na Filozofskom fakultetu u Osijeku (bez predrasuda) i planiramo upisati diplomski studij Informacijskih tehnologija. Aktivno sudjelujemo na IT konferencijama, radionicama i sl. kao volonteri, ali i sudionici  (ABC, Droidcon, KulenDayz, SQLSaturday...), na raznim hackathonima (OSC-Osijek, RSC-Varaždin).  Glavni krivac za naše (ne)uspjehe u IT vodama je poznati dr. sc. Tomislav Jakopec, poslijedoktorand. Nakon njegovog nemilosrdnog podučavanja spremne smo pokoriti i uljepštati osječku IT scenu. 
 
-
+Link prezentacije s predavanja:
+https://prezi.com/m/cdotdlltlafc/uvod-u-mysql/
